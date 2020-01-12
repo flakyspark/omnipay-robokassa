@@ -57,8 +57,8 @@ class PurchaseRequest extends AbstractRequest
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
-            'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $this->getCurrency()
+            //'Shp_Client' => $this->getClient(),
+            //'Shp_Currency' => $this->getCurrency()
         ]);
 
         ksort($fields);

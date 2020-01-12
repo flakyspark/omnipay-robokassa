@@ -24,7 +24,7 @@ class CompletePurchaseRequest extends AbstractRequest
     {
         $this->validate('purse', 'secretKey');
 
-        return $this->httpRequest->request->all();
+        return $this->httpRequest->query->all();
     }
 
     /**

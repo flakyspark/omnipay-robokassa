@@ -37,7 +37,7 @@ class CompletePurchaseResponse extends AbstractResponse
         $params = [
             $this->getAmount(),
             $this->getTransactionReference(),
-            $this->request->getSecretKey2()
+            $this->request->getSecretKey()
         ];
 
         foreach ($this->getCustomFields() as $field => $value) {
@@ -51,8 +51,8 @@ class CompletePurchaseResponse extends AbstractResponse
     {
         $fields = array_filter([
             'Shp_TransactionId' => $this->getTransactionId(),
-            'Shp_Client' => $this->getClient(),
-            'Shp_Currency' => $this->getCurrency(),
+            //'Shp_Client' => $this->getClient(),
+            //'Shp_Currency' => $this->getCurrency(),
         ]);
 
         ksort($fields);
