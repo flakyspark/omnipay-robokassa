@@ -123,4 +123,21 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\RoboKassa\Message\CompletePurchaseRequest', $parameters);
     }
+
+    /**
+     * @return bool
+     */
+    public function supportsAcceptNotification()
+    {
+        return true;
+    }
+
+    /**
+     * @param array $parameters
+     * @return \Omnipay\Common\Message\AbstractRequest
+     */
+    public function acceptNotification(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\RoboKassa\Message\AcceptNotificationRequest', $parameters);
+    }
 }
