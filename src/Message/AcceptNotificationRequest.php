@@ -40,7 +40,7 @@ class AcceptNotificationRequest extends AbstractRequest
     {
         $response = $this->response = new AcceptNotificationResponse($this, $data);
         $this->transactionStatus = 'completed';
-        echo "OK" . $response->getTransactionId() . PHP_EOL;
+        echo "OK" . $response->getInvId() . PHP_EOL;
 
         return $response;
     }
