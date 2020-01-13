@@ -39,9 +39,8 @@ class AcceptNotificationRequest extends AbstractRequest
     public function sendData($data)
     {
         $response = $this->response = new AcceptNotificationResponse($this, $data);
-
-        echo 'OK';
         $this->transactionStatus = 'completed';
+        echo "OK" . $response->getTransactionId() . PHP_EOL;
 
         return $response;
     }
